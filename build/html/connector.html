@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modbus Коннектор V0.1 &mdash; документация МПК Пересвет 0.0.1</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=ba58aea8"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=29b1f277"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Конфигуратор V0.1" href="configurator.html" />
+    <link rel="prev" title="Часто задаваемые вопросы, V0.1" href="docs_user/platform/FAQ.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/logo_middle_text.png" class="logo" alt="Логотип"/>
+          </a>
+              <div class="version">
+                0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="platform.html">Платформа Пересвет</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Modbus коннектор</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs_user/platform/PUG.html">Практическое руководство</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs_user/platform/UTD.html">Учебные пособия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs_user/platform/CUG.html">Руководство по настройке</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs_user/platform/AUG.html">Руководство по администрированию</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs_user/platform/FRG.html">Руководство по устранению неполадок</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs_user/platform/UKB.html">База знаний пользователей (внешняя)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs_user/platform/FAQ.html">Часто задаваемые вопросы</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configurator.html">Конфигуратор</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">МПК Пересвет</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Modbus Коннектор V0.1</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/connector.rst.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="modbus-v0-1">
+<h1>Modbus Коннектор V0.1<a class="headerlink" href="#modbus-v0-1" title="Link to this heading"></a></h1>
+<p><strong>Modbus Коннектор</strong></p>
+<p>Коннектор – это программа для приёма данных из устройств и передачи их в платформу. Связь с платформой реализуется через протокол связи WebSocket. Связь с устройствами может быть реализована с использованием различных протоколов прикладного уровня, например Modbus, OPC, и др.</p>
+<dl class="simple">
+<dt>Коннектор для протокола Modbus TCP/IP  платформы  написан на языке Python версии 3.10 с использованием библиотеки pyModbus.. Он реализует соединение с устройством по протоколу Modbus и отправку полученных данных   на платформу по протоколу WebSocket.</dt><dd><p>Обмен данными устройства с платформой осуществляется в асинхронном режиме за счет использования библиотеки asyncio.</p>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Содержание:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="docs_user/platform/PUG.html">Практическое руководство</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs_user/platform/UTD.html">Учебные пособия</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs_user/platform/CUG.html">Руководство по настройке</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs_user/platform/AUG.html">Руководство по администрированию</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs_user/platform/FRG.html">Руководство по устранению неполадок</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs_user/platform/UKB.html">База знаний пользователей (внешняя)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs_user/platform/FAQ.html">Часто задаваемые вопросы</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="docs_user/platform/FAQ.html" class="btn btn-neutral float-left" title="Часто задаваемые вопросы, V0.1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="configurator.html" class="btn btn-neutral float-right" title="Конфигуратор V0.1" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2023, ООО Матч Поинт Консалтинг. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

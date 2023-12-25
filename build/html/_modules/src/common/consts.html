@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>src.common.consts &mdash; документация МПК Пересвет 0.0.1</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=ba58aea8"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../_static/translations.js?v=29b1f277"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/logo_middle_text.png" class="logo" alt="Логотип"/>
+          </a>
+              <div class="version">
+                0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Содержание:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../terms.html">Используемые термины</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../architecture.html">Архитектура</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../developer.html">Руководство разработчика</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../symbols.html">СпецСимволы</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">МПК Пересвет</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Код модуля</a></li>
+      <li class="breadcrumb-item active">src.common.consts</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Исходный код src.common.consts</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">IntEnum</span>
+
+<div class="viewcode-block" id="CNDataStorageTypes">
+<a class="viewcode-back" href="../../../developer.html#src.common.consts.CNDataStorageTypes">[документация]</a>
+<span class="k">class</span> <span class="nc">CNDataStorageTypes</span><span class="p">(</span><span class="n">IntEnum</span><span class="p">):</span>
+    <span class="n">CN_DS_VICTORIAMETRICS</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">CN_DS_POSTGRESQL</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">get_supported</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">cls</span><span class="o">.</span><span class="n">CN_DS_VICTORIAMETRICS</span><span class="p">,</span> <span class="bp">cls</span><span class="o">.</span><span class="n">CN_DS_POSTGRESQL</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="CNHTTPExceptionCodes">
+<a class="viewcode-back" href="../../../developer.html#src.common.consts.CNHTTPExceptionCodes">[документация]</a>
+<span class="k">class</span> <span class="nc">CNHTTPExceptionCodes</span><span class="p">(</span><span class="n">IntEnum</span><span class="p">):</span>
+    <span class="n">CN_422</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">422</span> <span class="c1"># Unprocessable Entity</span>
+    <span class="n">CN_424</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">424</span> <span class="c1"># Failed Dependency</span>
+    <span class="n">CN_500</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">500</span> <span class="c1"># Internal Server Error</span>
+    <span class="n">CN_503</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">503</span> <span class="c1"># Service Unavailable</span></div>
+
+
+<div class="viewcode-block" id="CNTagValueTypes">
+<a class="viewcode-back" href="../../../developer.html#src.common.consts.CNTagValueTypes">[документация]</a>
+<span class="k">class</span> <span class="nc">CNTagValueTypes</span><span class="p">(</span><span class="n">IntEnum</span><span class="p">):</span>
+    <span class="n">CN_INT</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">CN_DOUBLE</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">CN_STR</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">CN_JSON</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span></div>
+
+
+<div class="viewcode-block" id="Order">
+<a class="viewcode-back" href="../../../developer.html#src.common.consts.Order">[документация]</a>
+<span class="k">class</span> <span class="nc">Order</span><span class="p">(</span><span class="n">IntEnum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Порядок сортировки выборки</span>
+<span class="sd">    ASC - по возрастанию</span>
+<span class="sd">    DESC - по убыванию</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">CN_ASC</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">CN_DESC</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2023, ООО Матч Поинт Консалтинг. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
