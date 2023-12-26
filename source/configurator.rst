@@ -12,11 +12,14 @@
    :maxdepth: 1
    :caption: Содержание:
 
-   Практическое руководство<docs_user/platform/PUG>   
-   Учебные пособия<docs_user/platform/UTD>
-   Руководство по настройке<docs_user/platform/CUG>
-   Руководство по администрированию<docs_user/platform/AUG>
-   Руководство по устранению неполадок <docs_user/platform/FRG>
-   База знаний пользователей (внешняя)<docs_user/platform/UKB>
-   Часто задаваемые вопросы<docs_user/platform/FAQ>
- 
+   Спецификация требований к программному обеспечению<docs_dev/configurator/SRS>   
+   Описание разработки ПО<docs_dev/configurator/SDD>
+   Исходный код<docs_dev/configurator/SCD>
+   Пользовательский опыт <docs_dev/configurator/UxDD>
+   API документация (внешняя)<docs_dev/configurator/APID>
+   Микросервисы<docs_dev/configurator/MSD>
+   Тестирование программного обеспечения  <docs_dev/configurator/STD>
+   Дорожная карта продукта<docs_dev/configurator/SRD>
+   Документация SDK<docs_dev/configurator/SDKD>
+   UML-диаграммы<docs_dev/configurator/UMLD>
+   База знаний разработчика <docs_dev/configurator/IKBD>

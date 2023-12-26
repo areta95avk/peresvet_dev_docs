@@ -14,10 +14,14 @@ Modbus Коннектор V0.1
    :maxdepth: 1
    :caption: Содержание:
 
-   Практическое руководство<docs_user/platform/PUG>   
-   Учебные пособия<docs_user/platform/UTD>
-   Руководство по настройке<docs_user/platform/CUG>
-   Руководство по администрированию<docs_user/platform/AUG>
-   Руководство по устранению неполадок <docs_user/platform/FRG>
-   База знаний пользователей (внешняя)<docs_user/platform/UKB>
-   Часто задаваемые вопросы<docs_user/platform/FAQ>
+   Спецификация требований к программному обеспечению<docs_dev/connector/SRS>   
+   Описание разработки ПО<docs_dev/connector/SDD>
+   Исходный код<docs_dev/connector/SCD>
+   Пользовательский опыт <docs_dev/connector/UxDD>
+   API документация (внешняя)<docs_dev/connector/APID>
+   Микросервисы<docs_dev/connector/MSD>
+   Тестирование программного обеспечения  <docs_dev/connector/STD>
+   Дорожная карта продукта<docs_dev/connector/SRD>
+   Документация SDK<docs_dev/connector/SDKD>
+   UML-диаграммы<docs_dev/connector/UMLD>
+   База знаний разработчика <docs_dev/connector/IKBD>
